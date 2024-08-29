@@ -20,6 +20,7 @@ A aplicação servidor disponibiliza um endpoint `/cotacao` que recebe uma requi
 Para executar a aplicação, use o comando abaixo:
 ```bash
 $ cd server
+$ go mod tidy # Install dependencies if needed
 $ go run main.go
 ```
 
@@ -36,11 +37,14 @@ A aplicação cliente realiza uma requisição HTTP GET para o servidor, solicit
 
 #### 🌐 Detalhes da implementação:
 Maiores detalhes da implementação estão disponíveis no link abaixo:
-- [Documentação do Client](README.md)
+- [Documentação do Client](client/README.md)
 
 #### 🚀 Execução:
 Para executar a aplicação, use o comando abaixo:
 ```bash
 $ cd client
+$ go mod tidy # Install dependencies if needed
 $ go run main.go
 ```
+
+> ⚠️ É importante que o servidor esteja em execução para que o cliente possa realizar a requisição. ⚠️
