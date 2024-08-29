@@ -2,7 +2,6 @@ package params
 
 type TimeOut int
 
-// TODO: Change RequestTimeOut to 200 before send to FC
 const (
 	RequestTimeOut             TimeOut = 200
 	DatabasePersistenceTimeOut         = 10
