@@ -32,7 +32,7 @@ func createLogFile(resp structs.ExchangeApiResponse) error {
 		}
 		defer fl.Close()
 
-		_, err = fl.WriteString(actualDate + " - USD->BRL::" + resp.BID + "\n")
+		_, err = fl.WriteString(actualDate + " - Dólar: " + resp.BID + "\n")
 		if err != nil {
 			return err
 		}
@@ -43,6 +43,6 @@ func createLogFile(resp structs.ExchangeApiResponse) error {
 
 func printResponseData(resp structs.ExchangeApiResponse) {
 	if resp.BID != "" {
-		slog.Info("Cotação USD->BRL::", "bid", resp.BID)
+		slog.Info("Dólar: ", "bid", resp.BID)
 	}
 }
